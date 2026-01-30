@@ -42,6 +42,7 @@ jobs:
       # 5️⃣ Build final JAR
       - name: Build JAR
         run: mvn clean package -DskipTests=true
+        working-directory: backend
 
       # 6️⃣ Copy JAR to EC2
       - name: Upload JAR to EC2
